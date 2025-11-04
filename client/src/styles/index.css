@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.list-token {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* Space between rows */
+}
+
+.token-row {
+  display: flex;
+  gap: 16px;
+  /* Space between tokens in the same row */
+  justify-content: space-between;
+  /* Spread tokens evenly in the row */
+}
+
+/* Individual TokenDetail component styling (optional) */
+.token-row>div {
+  flex: 1;
+  /* Make tokens equally spaced */
+  /* max-width: 33%; */
+  /* Ensure no token takes up too much space */
+  min-width: 150px;
+  /* Prevent tokens from shrinking too much */
+  overflow-x: scroll;
+}
+
+.token-detail {
+  flex: 4;
+  display: flex;
+  justify-content: space-around;
+}
+
+.token-quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.multi-select-token {
+  margin-bottom: 20px;
+}
+
+.token-item {
+  border: 1px solid #ddd;
+}
+
+input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+/* Token detail */
+.token-detail-row {
+  display: flex;
+  width: 100%;
+}
+
+.token-detail-row>div {
+  flex: 1;
+  padding: 0px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  /* Border only on the left side */
+}
+
+
+.token-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.token-name-column {
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  text-align: center;
+  /* Optional: center the text */
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  padding: 5px;
+}
+
+.token-name {
+  width: calc(100% - 20px);
+}
+
+.token-name p {
+  margin: 0;
+}
+
+.quantity-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.quantity-header input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  width: calc(100% - 20px);
+  text-align: center;
+  background-color: #f0f8ff;
+  /* Light background color */
+}
+
+input[type="number"]:focus {
+  background-color: #e6f7ff;
+  /* Lighter background color on focus */
+  border-color: #0056b3;
+  /* Darker border on focus */
+  outline: none;
+  /* Remove default outline */
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 20px;
+  padding: 0;
+}
+
+.remove-button:hover {
+  color: #d9363e;
+}
+
+.result-column,
+.extra-column {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Container for the entire row */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Space between elements */
+  align-items: center;
+  /* Vertically center align */
+  gap: 20px;
+  /* Space between elements */
+}
+
+/* Flex item for each element */
+.container>div {
+  flex: 1;
+  /* Make each item take up an equal amount of space */
+  min-width: 200px;
+  /* Minimum width to ensure elements don't shrink too much */
+}
+
+/* Adjust width for specific elements */
+.container .multiselect,
+.container .select {
+  width: 100%;
+}
+
+/* For labels */
+label {
+  margin-right: 10px;
+}
+
+.token-result-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  /* Ensure that swap and revert columns are side by side */
+}
+
+.swap-column,
+.revert-column {
+  text-align: center;
+  flex: 1;
+  /* padding: 10px; */
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  /* Add border on the left of the revert-column */
+}
+
+.swap-column {
+  border-left: none;
+  /* Remove border from the swap-column to only have it between columns */
+}
+
+.highlight {
+  /* background-color: yellow; */
+  /* Highlight color */
+  font-weight: bold;
+}
+
+.token-image {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.add-column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20px;
+}
+
+.add-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  /* Remove extra padding */
+  transition: color 0.3s ease;
+}
+
+.add-button:hover {
+  color: #0056b3;
+}
+
+.result-item {
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding: 3px;
+}
